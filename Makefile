@@ -9,5 +9,7 @@ clean:
 	rm *.o
 
 install: Jinux 
+	mkdir -p isodir/boot/grub
 	cp Jinux.bin isodir/boot/Jinux.bin
+	cp grub.cfg isodir/boot/grub
 	grub-mkrescue -o Jinux.iso isodir
